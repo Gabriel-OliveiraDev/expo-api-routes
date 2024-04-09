@@ -4,7 +4,7 @@ export async function POST(request: ExpoRequest): Promise<ExpoResponse> {
   const { email, password } = await request.json()
 
 
-  if( email === "gabriel@gmail.com" && password === "123" ){
+  if( email === "gabriel@gmail" && password === "123" ){
     return ExpoResponse.json({
       email,
       name: "Gabriel Oliveira",

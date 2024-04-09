@@ -1,8 +1,6 @@
 import { useState } from 'react'
 
-import {TextInput, View, Text, StyleSheet, Pressable, Alert, 
-
-} from 'react-native'
+import { TextInput, View, Text, StyleSheet, Pressable, } from 'react-native'
 
 import { api } from '@/server/api'
 
@@ -22,14 +20,10 @@ export default function Home(){
         email,
         password,
       })
-      console.log("foi")
       alert("Olá " + response.data.name)  
 
     } catch(error) {
       if (isAxiosError(error)) {
-        console.log(email)
-        console.log(password)
-        console.log(error)
         return alert(error.response?.data)
     }
 
